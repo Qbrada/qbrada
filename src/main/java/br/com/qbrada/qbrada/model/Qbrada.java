@@ -81,6 +81,14 @@ public class Qbrada {
         this.genero = genero;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public String getImagem() {
         return imagem;
     }
