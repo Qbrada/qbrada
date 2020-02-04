@@ -19,10 +19,25 @@ public class Qbrada {
     private String genero;
 
     @Column
+    private String descricao;
+
+    @Column
     private String imagem;
 
     @Column
     private Date dataEvento;
+
+    @Column
+    private String rua;
+
+    @Column
+    private String estado;
+
+    @Column
+    private String bairro;
+
+    @Column
+    private int numero;
 
     @Column
     private String horaInicio;
@@ -41,18 +56,6 @@ public class Qbrada {
 
     @Column
     private LocalDate dataCriacao;
-
-    @Column
-    private String rua;
-
-    @Column
-    private String estado;
-
-    @Column
-    private String bairro;
-
-    @Column
-    private int numero;
 
     public Long getId() {
         return id;
@@ -92,6 +95,38 @@ public class Qbrada {
 
     public void setDataEvento(Date dataEvento) {
         this.dataEvento = dataEvento;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     public String getHoraInicio() {
@@ -140,37 +175,5 @@ public class Qbrada {
 
     public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
-    }
-
-    public String getRua() {
-        return rua;
-    }
-
-    public void setRua(String rua) {
-        this.rua = rua;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
     }
 }

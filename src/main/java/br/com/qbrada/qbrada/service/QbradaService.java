@@ -18,4 +18,10 @@ public class QbradaService {
         evento.setDataCriacao(LocalDate.now());
         return repository.save(evento);
     }
+
+    public Iterable<Qbrada> listarEventos() {
+        Iterable<Qbrada> eventos = repository.findAll();
+        return eventos;
+    }
+
 }
