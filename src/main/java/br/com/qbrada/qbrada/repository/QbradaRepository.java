@@ -5,5 +5,4 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface QbradaRepository extends CrudRepository<Qbrada, String> {
 
-
 }
