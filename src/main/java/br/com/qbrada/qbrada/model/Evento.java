@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "evento")
-public class Qbrada {
+public class Evento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
