@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,11 @@
 </head>
 <body>
 <h1>Cadastro de Eventos</h1>
+
+<div th:each="erro : ${erros}">
+   <span th:text="${erro.field}"></span>
+    <span th:text="${erro.defaultMessage}"></span>
+</div>
 
 <form action="cadastrar" method="POST">
 
@@ -29,7 +34,7 @@
     </select><br>
 
     <label>Data: </label>
-    <input type="text" name="dataEvento"> <br><br>
+    <input type="date" name="dataEvento"> <br><br>
 
     <label>Inicio do Evento: </label>
     <input type="text" name="horaInicio"> <br><br>

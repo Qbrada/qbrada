@@ -1,6 +1,9 @@
 package br.com.qbrada.qbrada.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -13,6 +16,7 @@ public class Qbrada {
     private Long id;
 
     @Column
+    @NotBlank
     private String nome;
 
     @Column
@@ -25,6 +29,7 @@ public class Qbrada {
     private String imagem;
 
     @Column
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date dataEvento;
 
     @Column

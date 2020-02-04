@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Service
 public class QbradaService {
@@ -24,4 +25,11 @@ public class QbradaService {
         return eventos;
     }
 
+    public Qbrada buscarNome(String nome) {
+        Optional<Qbrada> eventos = repository.findByNome(nome);
+        if (eventos.isPresent()) {
+            return eventos.get();
+        }
+        return null;
+    }
 }
