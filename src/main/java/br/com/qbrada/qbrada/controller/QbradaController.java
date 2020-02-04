@@ -32,5 +32,4 @@ public class QbradaController {
             pagina.addObject("eventos", eventos);
             return pagina;
     }
-
 }

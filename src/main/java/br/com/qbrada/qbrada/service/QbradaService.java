@@ -14,9 +14,9 @@ public class QbradaService {
     private QbradaRepository repository;
 
     public Qbrada cadastrarEvento(Qbrada evento) {
-        evento.setAtivo(Boolean.TRUE);
-        evento.setDataCriacao(LocalDate.now());
-        return repository.save(evento);
+            evento.setAtivo(Boolean.TRUE);
+            evento.setDataCriacao(LocalDate.now());
+            return repository.save(evento);
     }
 
     public Iterable<Qbrada> listarEventos() {

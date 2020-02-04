@@ -184,4 +184,5 @@ public class Qbrada {
     public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
+
 }
