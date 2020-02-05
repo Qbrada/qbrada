@@ -6,16 +6,15 @@
 </head>
 <body>
 
-<h1>Digite nome do evneto que vocẽ está procurando:</h1>
-<form action="/buscarNome" method="get" class="formulario">
+<h1>Digite nome do evento que vocẽ está procurando:</h1>
 
-    <div class="campo">
-        <label>Nome do Evento: </label>
-        <input type="text" name="nome">
-    </div>
-
-    <button>Buscar</button>
+<form action="pesquisarevento" method="post">
+    <label>Pesquisar evento:</label>
+    <input name="nomepesquisa">
+    <input type="submit" value="Busca">
 </form>
+
+
 
 </body>
 </html>

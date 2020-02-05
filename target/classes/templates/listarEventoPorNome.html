@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div class="formulario">
+<div th:each="evento : ${eventos}" class="formulario">
     <div>
         <p><strong>Nome:</strong> <span th:text="${evento.nome}"></span></p>
         <p><strong>Tipo: <span th:text="${evento.genero}"></span></p>
