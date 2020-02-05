@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
@@ -40,3 +41,37 @@
 
 </body>
 </html>
+=======
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Eventos</title>
+</head>
+<body>
+    <h1>Eventos Cadastrados</h1>
+
+    <div th:each="evento : ${eventos}">
+        <div>
+            <p><strong>Acesso:</strong>
+                <a th:href="@{'/evento/' + ${evento.nome}}">
+                    <span th:text="${evento.nome}"></span>
+                </a>
+            </p>
+
+            <br>
+                <img th:src="${evento.imagem}" width="50%">
+            <br>
+
+            <p><strong>Nome:</strong> <span th:text="${evento.nome}"></span></p>
+            <p><strong>Criador:</strong> <span th:text="${evento.criador}"></span></p>
+            <p><strong>Genero:</strong> <span th:text="${evento.genero}"></span></p>
+            <p><strong>Data do Evento:</strong> <span th:text="${evento.dataEvento}"></span></p>
+            <p><strong>Descrição:</strong> <span th:text="${evento.descricao}"></span></p>
+
+            <hr>
+
+        </div>
+    </div>
+</body>
+</html>
+>>>>>>> 65cabc948ec8feab048748d7425d81f2b2284ccd
