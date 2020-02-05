@@ -20,12 +20,15 @@ public class Qbrada {
     private String nome;
 
     @Column
+    @NotBlank
     private String genero;
 
     @Column
+    @NotBlank
     private String descricao;
 
     @Column
+    @NotBlank
     private String imagem;
 
     @Column
@@ -33,27 +36,34 @@ public class Qbrada {
     private Date dataEvento;
 
     @Column
+    @NotBlank
     private String rua;
 
     @Column
+    @NotBlank
     private String estado;
 
     @Column
+    @NotBlank
     private String bairro;
 
     @Column
     private int numero;
 
     @Column
+    @NotBlank
     private String horaInicio;
 
     @Column
+    @NotBlank
     private String horaFim;
 
     @Column
+    @NotBlank
     private String criador;
 
     @Column
+    @NotBlank
     private String colaboradores;
 
     @Column

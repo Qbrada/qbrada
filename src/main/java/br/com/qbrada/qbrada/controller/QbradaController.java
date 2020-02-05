@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
 
@@ -60,7 +59,7 @@ public class QbradaController {
         Qbrada evento = service.buscarNome(nome);
         if(evento != null){
             model.addAttribute("evento", evento);
-            return "listarPorNome";
+            return "listarEvento";
         }
         else{
             model.addAttribute("msg", "O evento " + nome + " não foi encontrado!! procure novamente");
@@ -73,11 +72,25 @@ public class QbradaController {
         Qbrada evento = service.buscarNome(nome);
         if(evento != null){
             model.addAttribute("evento", evento);
-            return "listaPorNome";
+            return "listarEvento";
         }
         else{
             model.addAttribute("msg", "O evento " + nome + " não foi encontrado!! procure novamente");
             return "buscaNome";
         }
+    }
+
+    @GetMapping("/excluir/{id}")
+    public String excluirFilme(@PathVariable("id") long id, Model model){
+        service.excluirEvento(id);
+        model.addAttribute("msg", "Um item foi excluido");
+        return "listarEventos";
+    }
+
+    @GetMapping("/desativar/{id}")
+    public String desativar(@PathVariable("id") long id, Model model){
+        service.desativar(id);
+        model.addAttribute("msg", "Um item foi desativado");
+        return "listarEventos";
     }
 }

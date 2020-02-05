@@ -32,4 +32,17 @@ public class QbradaService {
         }
         return null;
     }
+
+    public void excluirEvento(long id) {
+        repository.deleteById(id);
+    }
+
+    public void desativar(long id) {
+        Optional<Qbrada> eventos = repository.findById(id);
+        if(eventos.get() != null){
+            eventos.get().setAtivo(false);
+            repository.save(eventos.get());
+        }
+
+    }
 }
