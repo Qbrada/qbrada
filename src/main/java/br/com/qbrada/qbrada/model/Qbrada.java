@@ -48,7 +48,8 @@ public class Qbrada {
     private String bairro;
 
     @Column
-    private int numero;
+    @NotBlank
+    private String numero;
 
     @Column
     @NotBlank
@@ -144,11 +145,11 @@ public class Qbrada {
         this.bairro = bairro;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

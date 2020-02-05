@@ -24,8 +24,8 @@
             <p><strong>Criador:</strong> <span th:text="${evento.criador}"></span></p>
             <p><strong>Colaboradores:</strong><span th:text="${evento.colaboradores}"></span></p>
             <p><strong>Data de Criação:</strong> <span th:text="${evento.dataCriacao}"></span></p>
-            <a th:href="@{'/excluir/' + ${evento.id}}" action="eventos">Clique aqui para excluir pra sempre</a>
-            <a th:href="@{'/desativar/' + ${evento.id}}" action="eventos">Desativar</a>
+            <button><a th:href="@{'/excluir/' + ${evento.id}}">Excluir</a></button>
+            <button><a th:href="@{'/desativar/' + ${evento.id}}">Desativar</a></button>
 
         </div>
     </div>

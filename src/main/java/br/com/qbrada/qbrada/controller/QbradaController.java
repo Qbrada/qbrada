@@ -35,10 +35,14 @@ public class QbradaController {
 
     @ExceptionHandler({BindException.class})
     public String tratarErrosValidacao(BindException exception, Model model){
-        System.out.println(exception);
-
-        model.addAttribute("erros", exception.getFieldErrors());
-        return "cadastro";
+        try {
+            model.addAttribute("erros", exception.getFieldErrors());
+            return "cadastro";
+        }
+        catch(Exception e){
+            System.out.println(e);
+            return null;
+        }
     }
 
     @GetMapping("/eventos")
@@ -83,14 +87,14 @@ public class QbradaController {
     @GetMapping("/excluir/{id}")
     public String excluirFilme(@PathVariable("id") long id, Model model){
         service.excluirEvento(id);
-        model.addAttribute("msg", "Um item foi excluido");
-        return "listarEventos";
+        model.addAttribute("excluir", "Um item foi excluido");
+        return "redirect:/eventos";
     }
 
     @GetMapping("/desativar/{id}")
     public String desativar(@PathVariable("id") long id, Model model){
         service.desativar(id);
-        model.addAttribute("msg", "Um item foi desativado");
-        return "listarEventos";
+        model.addAttribute("desativar", "Um item foi desativado");
+        return "redirect:/eventos";
     }
 }
